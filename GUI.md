@@ -335,7 +335,7 @@ console.log("10 - 4 =", subtract(10, 4));
 2. Use the built-in merge tool or your preferred editor
 3. Mark conflicts as resolved when done
 
-I'll add a screenshot here!
+Adding a bad link here that doesn't work!
 
 ## Keyboard Shortcuts
 
