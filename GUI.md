@@ -215,8 +215,6 @@ console.log("10 - 4 =", subtract(10, 4));
 1. Check the box at the top to select all changes
 2. Or use **Ctrl+A** (Windows) / **Cmd+A** (Mac)
 
-*Screenshot needed: Staging interface with checkboxes*
-
 ### 3. Write a Commit Message
 
 1. In the commit message box at the bottom, write a descriptive message
@@ -230,13 +228,11 @@ console.log("10 - 4 =", subtract(10, 4));
 
 *Screenshot needed: Commit interface with message and commit button*
 
-### 5. View Your Commit
+### 5. (Optional) View Your Commit
 
 1. Switch to the **"History"** tab
 2. You'll see your new commit at the top
 3. Click on the commit to see the details and file changes
-
-*Screenshot needed: History tab showing recent commit*
 
 ## Pushing Changes to GitHub
 
@@ -246,7 +242,7 @@ console.log("10 - 4 =", subtract(10, 4));
 2. Click **"Push origin"** to upload your branch to GitHub
 3. If this is a new branch, GitHub Desktop will automatically set up the upstream
 
-*Screenshot needed: Push button and push dialog*
+![main GUI img](imgs/push-origin.png)
 
 ### 2. Verify the Push
 
