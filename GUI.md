@@ -224,7 +224,9 @@ console.log("10 - 4 =", subtract(10, 4));
 ### 4. Commit Your Changes
 
 1. Click the **"Commit to [branch-name]"** button
-2. Your changes are now committed to your local branch
+2. **If you don't have write access** you can "fork" the repository to make your own copy.  In a later section, we will go over pull requests to merge your changes with the main repository (with approval from the repo owner)
+
+![Fork repo img](imgs/no-branch-permission.png)
 
 ### 5. (Optional) View Your Commit
 
