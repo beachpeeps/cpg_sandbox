@@ -328,14 +328,16 @@ console.log("10 - 4 =", subtract(10, 4));
 #### Pulling Changes
 1. Click **"Fetch origin"** to check for updates
 2. If there are new changes, click **"Pull origin"** to download them
-3. Resolve any merge conflicts if they occur
+3. If there is an error, you can stash your current changes to resolve any merge conflicts
+
+![fetch origin](imgs/fetch-origin.png)
 
 #### Merge Conflicts
 1. GitHub Desktop will highlight conflicted files
 2. Use the built-in merge tool or your preferred editor
 3. Mark conflicts as resolved when done
 
-Adding a bad link here that doesn't work!
+![main GUI img](imgs/merge-conflict.png)
 
 ## Keyboard Shortcuts
 
