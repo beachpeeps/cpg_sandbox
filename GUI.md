@@ -44,13 +44,14 @@ This guide covers the same Git workflows as the main README.md, but using the **
 ### Method 2: Clone from GitHub Desktop
 
 1. Open GitHub Desktop
-2. Click **"Clone a repository from the Internet"**
+2. Click **"Current Repository"** (top left)
+3. click add → clone repositroy...
 3. Go to the **"GitHub.com"** tab
 4. Find your repository in the list
 5. Choose the local path where you want to save it
 6. Click **"Clone"**
 
-*Screenshot needed: GitHub Desktop clone dialog showing repository selection*
+![Select repository img](imgs/Select-repo.png)
 
 ## Understanding the GitHub Desktop Interface
 
@@ -66,7 +67,7 @@ When you open GitHub Desktop, you'll see several key areas:
 6. **Commit Button**: To commit your changes
 7. **Push/Pull Buttons**: To sync with GitHub
 
-*Screenshot needed: Main GitHub Desktop interface with labels*
+![main GUI img](imgs/main-github.png)
 
 ### Navigation Tabs
 
@@ -78,18 +79,16 @@ When you open GitHub Desktop, you'll see several key areas:
 
 ### Visual Indicators
 
-1. **Branch Name**: Look at the top center of the interface - the current branch name is displayed
+1. **Branch Name**: Look at the top center of the interface - the current branch name is displayed.  (at this point, you will be on the main branch)
 2. **Branch Dropdown**: Click the branch name to see all available branches
 3. **Status Bar**: The bottom of the interface shows current branch and sync status
 
-*Screenshot needed: Branch selector showing current branch highlighted*
+![main GUI img](imgs/branch-selector.png)
 
 ### Branch Information
 
 - Current branch is always visible in the top center
-- Green checkmark indicates the branch is up to date with remote
-- Yellow dot indicates there are unpushed commits
-- Red dot indicates there are conflicts or issues
+- Checkmark indicates the branch is up to date with remote
 
 ## Understanding Branches (GUI Context)
 
@@ -104,8 +103,6 @@ When you open GitHub Desktop, you'll see several key areas:
 1. **Local Branches**: Branches that exist only on your computer
 2. **Remote Branches**: Branches that exist on GitHub (shown with "origin/" prefix)
 3. **Current Branch**: Highlighted in the branch selector
-
-*Screenshot needed: Branch dropdown showing local and remote branches*
 
 ## Creating a New Branch
 
@@ -142,23 +139,14 @@ chore/update-dependencies
 docs/add-api-documentation
 ```
 
-*Screenshot needed: New branch dialog with naming example*
-
 ## Making Code Changes
 
 ### Creating Files
+1. Right click your repository in GitHub Desktop
+2. Click "Show in Explorer"
+4. Create new files as needed to stage changes on your branch
 
-You can create files in two ways:
-
-#### Method 1: Using Your Code Editor
-1. Open your preferred code editor (VS Code, Sublime Text, etc.)
-2. Navigate to your repository folder
-3. Create new files as needed
-
-#### Method 2: Using File Explorer
-1. Open your file explorer
-2. Navigate to your repository folder
-3. Right-click and create new files
+![main GUI img](imgs/Show-in-explorer.png)
 
 ### Example Files to Create
 
@@ -212,10 +200,10 @@ console.log("10 - 4 =", subtract(10, 4));
 ### 1. View Your Changes
 
 1. Switch to the **"Changes"** tab in GitHub Desktop
-2. You'll see all modified, added, and deleted files
+2. You'll see all modified (yellow), added (green), and deleted (red) files
 3. Click on any file to see a diff view of what changed
 
-*Screenshot needed: Changes tab showing file modifications*
+![main GUI img](imgs/View-Changes.png)
 
 ### 2. Stage Files for Commit
 
