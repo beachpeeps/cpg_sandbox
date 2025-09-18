@@ -44,13 +44,14 @@ This guide covers the same Git workflows as the main README.md, but using the **
 ### Method 2: Clone from GitHub Desktop
 
 1. Open GitHub Desktop
-2. Click **"Clone a repository from the Internet"**
+2. Click **"Current Repository"** (top left)
+3. click add → clone repositroy...
 3. Go to the **"GitHub.com"** tab
 4. Find your repository in the list
 5. Choose the local path where you want to save it
 6. Click **"Clone"**
 
-*Screenshot needed: GitHub Desktop clone dialog showing repository selection*
+![Select repository img](imgs/Select-repo.png)
 
 ## Understanding the GitHub Desktop Interface
 
@@ -66,7 +67,7 @@ When you open GitHub Desktop, you'll see several key areas:
 6. **Commit Button**: To commit your changes
 7. **Push/Pull Buttons**: To sync with GitHub
 
-*Screenshot needed: Main GitHub Desktop interface with labels*
+![main GUI img](imgs/main-github.png)
 
 ### Navigation Tabs
 
@@ -78,18 +79,16 @@ When you open GitHub Desktop, you'll see several key areas:
 
 ### Visual Indicators
 
-1. **Branch Name**: Look at the top center of the interface - the current branch name is displayed
+1. **Branch Name**: Look at the top center of the interface - the current branch name is displayed.  (at this point, you will be on the main branch)
 2. **Branch Dropdown**: Click the branch name to see all available branches
 3. **Status Bar**: The bottom of the interface shows current branch and sync status
 
-*Screenshot needed: Branch selector showing current branch highlighted*
+![branch selector img](imgs/branch-selector.png)
 
 ### Branch Information
 
 - Current branch is always visible in the top center
-- Green checkmark indicates the branch is up to date with remote
-- Yellow dot indicates there are unpushed commits
-- Red dot indicates there are conflicts or issues
+- Checkmark indicates the branch is up to date with remote
 
 ## Understanding Branches (GUI Context)
 
@@ -104,8 +103,6 @@ When you open GitHub Desktop, you'll see several key areas:
 1. **Local Branches**: Branches that exist only on your computer
 2. **Remote Branches**: Branches that exist on GitHub (shown with "origin/" prefix)
 3. **Current Branch**: Highlighted in the branch selector
-
-*Screenshot needed: Branch dropdown showing local and remote branches*
 
 ## Creating a New Branch
 
@@ -142,23 +139,14 @@ chore/update-dependencies
 docs/add-api-documentation
 ```
 
-*Screenshot needed: New branch dialog with naming example*
-
 ## Making Code Changes
 
 ### Creating Files
+1. Right click your repository in GitHub Desktop
+2. Click "Show in Explorer"
+3. Create new files as needed to stage changes on your branch
 
-You can create files in two ways:
-
-#### Method 1: Using Your Code Editor
-1. Open your preferred code editor (VS Code, Sublime Text, etc.)
-2. Navigate to your repository folder
-3. Create new files as needed
-
-#### Method 2: Using File Explorer
-1. Open your file explorer
-2. Navigate to your repository folder
-3. Right-click and create new files
+![show-in=explorer img](imgs/Show-in-explorer.png)
 
 ### Example Files to Create
 
@@ -212,10 +200,10 @@ console.log("10 - 4 =", subtract(10, 4));
 ### 1. View Your Changes
 
 1. Switch to the **"Changes"** tab in GitHub Desktop
-2. You'll see all modified, added, and deleted files
+2. You'll see all modified (yellow), added (green), and deleted (red) files
 3. Click on any file to see a diff view of what changed
 
-*Screenshot needed: Changes tab showing file modifications*
+![view commit changes img](imgs/View-Changes.png)
 
 ### 2. Stage Files for Commit
 
@@ -227,8 +215,6 @@ console.log("10 - 4 =", subtract(10, 4));
 1. Check the box at the top to select all changes
 2. Or use **Ctrl+A** (Windows) / **Cmd+A** (Mac)
 
-*Screenshot needed: Staging interface with checkboxes*
-
 ### 3. Write a Commit Message
 
 1. In the commit message box at the bottom, write a descriptive message
@@ -238,17 +224,15 @@ console.log("10 - 4 =", subtract(10, 4));
 ### 4. Commit Your Changes
 
 1. Click the **"Commit to [branch-name]"** button
-2. Your changes are now committed to your local branch
+2. **If you don't have write access** you can "fork" the repository to make your own copy.  In a later section, we will go over pull requests to merge your changes with the main repository (with approval from the repo owner)
 
-*Screenshot needed: Commit interface with message and commit button*
+![Fork repo img](imgs/no-branch-permission.png)
 
-### 5. View Your Commit
+### 5. (Optional) View Your Commit
 
 1. Switch to the **"History"** tab
 2. You'll see your new commit at the top
 3. Click on the commit to see the details and file changes
-
-*Screenshot needed: History tab showing recent commit*
 
 ## Pushing Changes to GitHub
 
@@ -258,7 +242,7 @@ console.log("10 - 4 =", subtract(10, 4));
 2. Click **"Push origin"** to upload your branch to GitHub
 3. If this is a new branch, GitHub Desktop will automatically set up the upstream
 
-*Screenshot needed: Push button and push dialog*
+![push origin img](imgs/push-origin.png)
 
 ### 2. Verify the Push
 
@@ -268,16 +252,16 @@ console.log("10 - 4 =", subtract(10, 4));
 
 ### 3. View on GitHub
 
-1. Click **"View on GitHub"** to open your repository in a web browser
+1. Right click your repository → **"View on GitHub"** to open your repository in a web browser
 2. You can see your new branch and commits on GitHub.com
 
-*Screenshot needed: GitHub.com showing the new branch*
+![view commit on github img](imgs/Github-website-update.png)
 
 ## Creating a Pull Request
 
 ### Method 1: From GitHub Desktop
 
-1. After pushing your branch, you'll see a **"Create Pull Request"** button
+1. After pushing your branch, you'll see a **"Preview Pull Request"** button in the main window
 2. Click the button to open GitHub.com in your browser
 3. The pull request form will be pre-filled with your branch information
 
@@ -295,15 +279,13 @@ console.log("10 - 4 =", subtract(10, 4));
 4. **Labels**: Add appropriate labels
 5. **Milestone**: Set a milestone if applicable
 
-*Screenshot needed: Pull request creation form*
+![pull request website img](imgs/Pull-request-creation-form.png)
 
 ### Submit the Pull Request
 
 1. Review all the information
 2. Click **"Create pull request"**
 3. Your pull request is now submitted for review
-
-*Screenshot needed: Completed pull request*
 
 ## Useful GitHub Desktop Features
 
@@ -330,8 +312,6 @@ console.log("10 - 4 =", subtract(10, 4));
 2. Select **"Delete [branch-name]"**
 3. Confirm the deletion
 
-*Screenshot needed: Branch management options*
-
 ### History and Comparison
 
 #### Viewing Commit History
@@ -343,21 +323,23 @@ console.log("10 - 4 =", subtract(10, 4));
 1. In the History tab, select two commits or branches
 2. See a side-by-side comparison of changes
 
-*Screenshot needed: History view with commit details*
+![history tab img](imgs/branch-history.png)
 
 ### Synchronization
 
 #### Pulling Changes
 1. Click **"Fetch origin"** to check for updates
 2. If there are new changes, click **"Pull origin"** to download them
-3. Resolve any merge conflicts if they occur
+3. If there is an error, you can stash your current changes to resolve any merge conflicts
+
+![fetch origin](imgs/fetch-origin.png)
 
 #### Merge Conflicts
-1. GitHub Desktop will highlight conflicted files
+1. GitHub Desktop will highlight conflicted files with a red exclamation point
 2. Use the built-in merge tool or your preferred editor
 3. Mark conflicts as resolved when done
 
-*Screenshot needed: Merge conflict resolution interface*
+![resolve merge conflict in editor img](imgs/merge-conflict.png)
 
 ## Keyboard Shortcuts
 
