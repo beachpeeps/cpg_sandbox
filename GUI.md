@@ -226,8 +226,6 @@ console.log("10 - 4 =", subtract(10, 4));
 1. Click the **"Commit to [branch-name]"** button
 2. Your changes are now committed to your local branch
 
-*Screenshot needed: Commit interface with message and commit button*
-
 ### 5. (Optional) View Your Commit
 
 1. Switch to the **"History"** tab
@@ -287,8 +285,6 @@ console.log("10 - 4 =", subtract(10, 4));
 2. Click **"Create pull request"**
 3. Your pull request is now submitted for review
 
-*Screenshot needed: Completed pull request*
-
 ## Useful GitHub Desktop Features
 
 ### Repository Management
@@ -314,8 +310,6 @@ console.log("10 - 4 =", subtract(10, 4));
 2. Select **"Delete [branch-name]"**
 3. Confirm the deletion
 
-*Screenshot needed: Branch management options*
-
 ### History and Comparison
 
 #### Viewing Commit History
@@ -327,7 +321,7 @@ console.log("10 - 4 =", subtract(10, 4));
 1. In the History tab, select two commits or branches
 2. See a side-by-side comparison of changes
 
-*Screenshot needed: History view with commit details*
+![main GUI img](imgs/branch-history.png)
 
 ### Synchronization
 
