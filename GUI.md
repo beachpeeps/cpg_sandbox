@@ -83,7 +83,7 @@ When you open GitHub Desktop, you'll see several key areas:
 2. **Branch Dropdown**: Click the branch name to see all available branches
 3. **Status Bar**: The bottom of the interface shows current branch and sync status
 
-![main GUI img](imgs/branch-selector.png)
+![branch selector img](imgs/branch-selector.png)
 
 ### Branch Information
 
@@ -144,9 +144,9 @@ docs/add-api-documentation
 ### Creating Files
 1. Right click your repository in GitHub Desktop
 2. Click "Show in Explorer"
-4. Create new files as needed to stage changes on your branch
+3. Create new files as needed to stage changes on your branch
 
-![main GUI img](imgs/Show-in-explorer.png)
+![show-in=explorer img](imgs/Show-in-explorer.png)
 
 ### Example Files to Create
 
@@ -203,7 +203,7 @@ console.log("10 - 4 =", subtract(10, 4));
 2. You'll see all modified (yellow), added (green), and deleted (red) files
 3. Click on any file to see a diff view of what changed
 
-![main GUI img](imgs/View-Changes.png)
+![view commit changes img](imgs/View-Changes.png)
 
 ### 2. Stage Files for Commit
 
@@ -240,7 +240,7 @@ console.log("10 - 4 =", subtract(10, 4));
 2. Click **"Push origin"** to upload your branch to GitHub
 3. If this is a new branch, GitHub Desktop will automatically set up the upstream
 
-![main GUI img](imgs/push-origin.png)
+![push origin img](imgs/push-origin.png)
 
 ### 2. Verify the Push
 
@@ -253,7 +253,7 @@ console.log("10 - 4 =", subtract(10, 4));
 1. Right click your repository → **"View on GitHub"** to open your repository in a web browser
 2. You can see your new branch and commits on GitHub.com
 
-![main GUI img](imgs/Github-website-update.png)
+![view commit on github img](imgs/Github-website-update.png)
 
 ## Creating a Pull Request
 
@@ -277,7 +277,7 @@ console.log("10 - 4 =", subtract(10, 4));
 4. **Labels**: Add appropriate labels
 5. **Milestone**: Set a milestone if applicable
 
-![main GUI img](imgs/Pull-request-creation-form.png)
+![pull request website img](imgs/Pull-request-creation-form.png)
 
 ### Submit the Pull Request
 
@@ -321,7 +321,7 @@ console.log("10 - 4 =", subtract(10, 4));
 1. In the History tab, select two commits or branches
 2. See a side-by-side comparison of changes
 
-![main GUI img](imgs/branch-history.png)
+![history tab img](imgs/branch-history.png)
 
 ### Synchronization
 
@@ -333,11 +333,11 @@ console.log("10 - 4 =", subtract(10, 4));
 ![fetch origin](imgs/fetch-origin.png)
 
 #### Merge Conflicts
-1. GitHub Desktop will highlight conflicted files
+1. GitHub Desktop will highlight conflicted files with a red exclamation point
 2. Use the built-in merge tool or your preferred editor
 3. Mark conflicts as resolved when done
 
-![main GUI img](imgs/merge-conflict.png)
+![resolve merge conflict in editor img](imgs/merge-conflict.png)
 
 ## Keyboard Shortcuts
 
