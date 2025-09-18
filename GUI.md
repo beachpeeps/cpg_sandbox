@@ -252,16 +252,16 @@ console.log("10 - 4 =", subtract(10, 4));
 
 ### 3. View on GitHub
 
-1. Click **"View on GitHub"** to open your repository in a web browser
+1. Right click your repository → **"View on GitHub"** to open your repository in a web browser
 2. You can see your new branch and commits on GitHub.com
 
-*Screenshot needed: GitHub.com showing the new branch*
+![main GUI img](imgs/Github-website-update.png)
 
 ## Creating a Pull Request
 
 ### Method 1: From GitHub Desktop
 
-1. After pushing your branch, you'll see a **"Create Pull Request"** button
+1. After pushing your branch, you'll see a **"Preview Pull Request"** button
 2. Click the button to open GitHub.com in your browser
 3. The pull request form will be pre-filled with your branch information
 
