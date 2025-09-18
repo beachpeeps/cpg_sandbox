@@ -11,31 +11,92 @@ This repository is designed to help you learn essential Git workflows. Follow th
 ## Table of Contents
 
 1. [Setting Up the Repository](#setting-up-the-repository)
-2. [Checking Your Current Branch](#checking-your-current-branch)
-3. [Creating a New Branch](#creating-a-new-branch)
-4. [Making Code Changes](#making-code-changes)
-5. [Committing Changes](#committing-changes)
-6. [Pushing Changes to GitHub](#pushing-changes-to-github)
-7. [Creating a Pull Request](#creating-a-pull-request)
-8. [Useful Git Commands](#useful-git-commands)
+2. [Forking the Repository (For Non-Owners)](#forking-the-repository-for-non-owners)
+3. [Checking Your Current Branch](#checking-your-current-branch)
+4. [Creating a New Branch](#creating-a-new-branch)
+5. [Making Code Changes](#making-code-changes)
+6. [Committing Changes](#committing-changes)
+7. [Pushing Changes to GitHub](#pushing-changes-to-github)
+8. [Creating a Pull Request](#creating-a-pull-request)
+9. [Useful Git Commands](#useful-git-commands)
 
 ## Setting Up the Repository
 
-### 1. Clone the Repository
+### Option A: If You Own the Repository
 
-First, clone this repository to your local machine:
+If you are the owner of the repository, you can clone it directly:
 
 ```bash
 git clone https://github.com/your-username/cpg_sandbox.git
 cd cpg_sandbox
 ```
 
-### 2. Pull Latest Changes
+### Option B: If You Don't Own the Repository (Recommended for Contributors)
 
-Always ensure you have the latest changes from the remote repository:
+If you want to contribute to someone else's repository, you should fork it first.
+
+## Forking the Repository (For Non-Owners)
+
+### What is a Fork?
+
+A **fork** is your own copy of someone else's repository. It allows you to:
+- Make changes without affecting the original repository
+- Contribute back to the original project through pull requests
+- Keep your own version of the project
+
+### 1. Fork the Repository on GitHub
+
+1. Navigate to the repository you want to contribute to on GitHub
+2. Click the "Fork" button in the top-right corner
+3. Choose where to fork it (usually your personal account)
+4. GitHub will create a copy of the repository under your account
+
+### 2. Clone Your Fork
+
+After forking, clone **your fork** (not the original repository):
 
 ```bash
-git pull origin main
+# Clone YOUR fork (replace 'your-username' with your actual GitHub username)
+git clone https://github.com/your-username/cpg_sandbox.git
+cd cpg_sandbox
+```
+
+### 3. Add the Original Repository as Upstream
+
+To keep your fork synchronized with the original repository, add it as an "upstream" remote:
+
+```bash
+# Add the original repository as upstream (replace 'original-owner' with the actual owner)
+git remote add upstream https://github.com/original-owner/cpg_sandbox.git
+
+# Verify your remotes
+git remote -v
+```
+
+You should see output like:
+```
+origin    https://github.com/your-username/cpg_sandbox.git (fetch)
+origin    https://github.com/your-username/cpg_sandbox.git (push)
+upstream  https://github.com/original-owner/cpg_sandbox.git (fetch)
+upstream  https://github.com/original-owner/cpg_sandbox.git (push)
+```
+
+### 4. Pull Latest Changes
+
+Always ensure you have the latest changes from the original repository:
+
+```bash
+# Fetch changes from the original repository
+git fetch upstream
+
+# Switch to main branch
+git checkout main
+
+# Merge the latest changes from upstream
+git merge upstream/main
+
+# Push the updated main branch to your fork
+git push origin main
 ```
 
 ## Checking Your Current Branch
@@ -293,20 +354,36 @@ git branch -a
 
 ### 1. Navigate to GitHub
 
+#### If You Own the Repository:
 1. Go to your repository on GitHub
 2. You should see a banner suggesting to create a pull request for your recently pushed branch
 3. Click "Compare & pull request"
+
+#### If You Forked the Repository:
+1. Go to **your fork** on GitHub (not the original repository)
+2. You should see a banner suggesting to create a pull request for your recently pushed branch
+3. Click "Compare & pull request"
+4. **Important**: Make sure the pull request is targeting the **original repository**, not your fork
+   - The "base repository" should be the original repository
+   - The "head repository" should be your fork
 
 ### 2. Fill Out the Pull Request
 
 - **Title**: Use a clear, descriptive title (e.g., "Add hello world script and calculator functions")
 - **Description**: Explain what changes you made and why
-- **Reviewers**: Assign reviewers if needed
-- **Labels**: Add appropriate labels
+- **Reviewers**: Assign reviewers if needed (only available if you have permissions)
+- **Labels**: Add appropriate labels (only available if you have permissions)
 
 ### 3. Submit the Pull Request
 
 Click "Create pull request" to submit your changes for review.
+
+### 4. After Creating the Pull Request
+
+- The original repository maintainers will review your changes
+- They may request changes or ask questions
+- Once approved, they will merge your pull request
+- Your changes will then be part of the original repository
 
 ## Useful Git Commands
 
@@ -384,6 +461,8 @@ git remote -v
 
 ## Common Workflow Summary
 
+### For Repository Owners:
+
 ```bash
 # 1. Start from main branch
 git checkout main
@@ -408,6 +487,45 @@ git push origin feature/my-new-feature
 
 # 7. Create pull request on GitHub
 # (Navigate to GitHub and use the web interface)
+```
+
+### For Contributors (Fork Workflow):
+
+```bash
+# 1. Fork the repository on GitHub first, then:
+
+# 2. Clone your fork
+git clone https://github.com/your-username/repository-name.git
+cd repository-name
+
+# 3. Add upstream remote
+git remote add upstream https://github.com/original-owner/repository-name.git
+
+# 4. Start from main branch and sync with upstream
+git checkout main
+git fetch upstream
+git merge upstream/main
+git push origin main
+
+# 5. Create and switch to new branch
+git checkout -b feature/my-new-feature
+
+# 6. Make your changes
+# (edit files, add new files, etc.)
+
+# 7. Check what you've changed
+git status
+git diff
+
+# 8. Stage and commit changes
+git add .
+git commit -m "Descriptive commit message"
+
+# 9. Push to your fork
+git push origin feature/my-new-feature
+
+# 10. Create pull request on GitHub
+# (Navigate to your fork on GitHub and create PR to original repository)
 ```
 
 ## Troubleshooting
@@ -436,5 +554,44 @@ git pull origin main
 git checkout your-feature-branch
 git merge main
 ```
+
+### If you're working with a fork and need to sync with upstream:
+```bash
+# Fetch latest changes from the original repository
+git fetch upstream
+
+# Switch to main branch
+git checkout main
+
+# Merge upstream changes
+git merge upstream/main
+
+# Push updated main to your fork
+git push origin main
+
+# Switch back to your feature branch
+git checkout your-feature-branch
+
+# Merge the updated main into your feature branch
+git merge main
+```
+
+### If you accidentally cloned the original repository instead of your fork:
+```bash
+# Add your fork as origin
+git remote add origin https://github.com/your-username/repository-name.git
+
+# Add the original as upstream
+git remote add upstream https://github.com/original-owner/repository-name.git
+
+# Verify your remotes
+git remote -v
+```
+
+### If your pull request is targeting the wrong repository:
+1. Go to your pull request on GitHub
+2. Click "Edit" next to the title
+3. Make sure the "base repository" is the original repository
+4. Make sure the "head repository" is your fork
 
 Happy coding and Git learning! 🚀
