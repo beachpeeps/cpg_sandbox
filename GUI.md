@@ -261,7 +261,7 @@ console.log("10 - 4 =", subtract(10, 4));
 
 ### Method 1: From GitHub Desktop
 
-1. After pushing your branch, you'll see a **"Preview Pull Request"** button
+1. After pushing your branch, you'll see a **"Preview Pull Request"** button in the main window
 2. Click the button to open GitHub.com in your browser
 3. The pull request form will be pre-filled with your branch information
 
@@ -279,7 +279,7 @@ console.log("10 - 4 =", subtract(10, 4));
 4. **Labels**: Add appropriate labels
 5. **Milestone**: Set a milestone if applicable
 
-*Screenshot needed: Pull request creation form*
+![main GUI img](imgs/Pull-request-creation-form.png)
 
 ### Submit the Pull Request
 
