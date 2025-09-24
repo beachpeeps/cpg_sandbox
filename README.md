@@ -27,7 +27,7 @@ This repository is designed to help you learn essential Git workflows. Follow th
 If you are the owner of the repository, you can clone it directly:
 
 ```bash
-git clone https://github.com/your-username/cpg_sandbox.git
+git clone https://github.com/beachpeeps/cpg_sandbox.git
 cd cpg_sandbox
 ```
 
@@ -66,8 +66,8 @@ cd cpg_sandbox
 To keep your fork synchronized with the original repository, add it as an "upstream" remote:
 
 ```bash
-# Add the original repository as upstream (replace 'original-owner' with the actual owner)
-git remote add upstream https://github.com/original-owner/cpg_sandbox.git
+# Add the original repository as upstream
+git remote add upstream https://github.com/beachpeeps/cpg_sandbox.git
 
 # Verify your remotes
 git remote -v
@@ -77,8 +77,8 @@ You should see output like:
 ```
 origin    https://github.com/your-username/cpg_sandbox.git (fetch)
 origin    https://github.com/your-username/cpg_sandbox.git (push)
-upstream  https://github.com/original-owner/cpg_sandbox.git (fetch)
-upstream  https://github.com/original-owner/cpg_sandbox.git (push)
+upstream  https://github.com/beachpeeps/cpg_sandbox.git (fetch)
+upstream  https://github.com/beachpeeps/cpg_sandbox.git (push)
 ```
 
 ### 4. Pull Latest Changes
@@ -495,11 +495,11 @@ git push origin feature/my-new-feature
 # 1. Fork the repository on GitHub first, then:
 
 # 2. Clone your fork
-git clone https://github.com/your-username/repository-name.git
-cd repository-name
+git clone https://github.com/your-username/cpg_sandbox.git
+cd cpg_sandbox
 
 # 3. Add upstream remote
-git remote add upstream https://github.com/original-owner/repository-name.git
+git remote add upstream https://github.com/beachpeeps/cpg_sandbox.git
 
 # 4. Start from main branch and sync with upstream
 git checkout main
@@ -579,10 +579,10 @@ git merge main
 ### If you accidentally cloned the original repository instead of your fork:
 ```bash
 # Add your fork as origin
-git remote add origin https://github.com/your-username/repository-name.git
+git remote add origin https://github.com/your-username/cpg_sandbox.git
 
 # Add the original as upstream
-git remote add upstream https://github.com/original-owner/repository-name.git
+git remote add upstream https://github.com/beachpeeps/cpg_sandbox.git
 
 # Verify your remotes
 git remote -v
